@@ -3,8 +3,10 @@ import React, { useState } from 'react';
 import './App.css';
 
 //TODO: make floors into seperate component
-//TODO: Identify keys needed with floor number
+//TODO: Identify up/down buttons needed with floor number
 //TODO: Add 2nd lift and up/down button logic
+//!How to handle lift element?
+//TODO: Animate the lift movement
 function App() {
   const [currentFloor, setCurrentFloor] = useState(1);
 
