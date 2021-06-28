@@ -1,23 +1,48 @@
-import logo from './logo.svg';
+// import Lift from './components/Lift';
 import './App.css';
 
+//TODO: make floors into seperate component
+//TODO: Identify keys needed with floor number
 function App() {
+  // return <Lift />;
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div class='container'>
+      <div className='lift-container'>
+        <div className='floor'>
+          <div className='floor-keys'>
+            <button className='button down-button'> DOWN </button>
+          </div>
+          <div className='lift'>L1</div>
+          {/* <div className='lift'>L2</div> */}
+          <div className='floor-num'>Floor no. 4</div>
+        </div>
+        <div className='floor'>
+          <div className='floor-keys'>
+            <button className='button up-button'> UP </button>
+            <button className='button down-button'> DOWN</button>
+          </div>
+          <div className='lift'>L1</div>
+          {/* <div className='lift'>L2</div> */}
+          <div className='floor-num'>Floor no. 3</div>
+        </div>
+        <div className='floor'>
+          <div className='floor-keys'>
+            <button className='button up-button'> UP </button>
+            <button className='button down-button'> DOWN </button>
+          </div>
+          <div className='lift'>L1</div>
+          {/* <div className='lift'>L2</div> */}
+          <div className='floor-num'>Floor no. 2</div>
+        </div>
+        <div className='floor'>
+          <div className='floor-keys'>
+            <button className='button up-button'> UP </button>
+          </div>
+          <div className='lift'>L1</div>
+          {/* <div className='lift'>L2</div> */}
+          <div className='floor-num'>Floor no. 1</div>
+        </div>
+      </div>
     </div>
   );
 }
