@@ -31,8 +31,19 @@
 }
 
 .button {
-  width: 50%;
-  height: 25%;
+  width: 80px;
+  height: 30px;
+  font-weight: bold;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.up-button {
+  background: green;
+}
+.down-button {
+  background: blue;
 }
 
 .lift {
@@ -41,4 +52,10 @@
   flex-direction: column;
   align-items: center;
   /* border: 2px solid black; */
+}
+
+.lift-element {
+  background: red;
+  height: 50px;
+  width: 50px;
 }
