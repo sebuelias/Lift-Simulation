@@ -59,3 +59,37 @@
   height: 50px;
   width: 50px;
 }
+
+.vertical-floors {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  height: 80%;
+}
+.floors {
+  height: 100px;
+  margin-bottom: 10px;
+  border-bottom: 3px solid black;
+}
+.keys-container {
+  width: 25%;
+}
+.lift-container {
+  width: 50%;
+}
+
+.keys {
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+}
+.lift-element-active {
+  background: purple;
+  height: 100px;
+  width: 50px;
+}
+.lift-element-inactive {
+  background: none;
+  height: 100px;
+  width: 50px;
+}
