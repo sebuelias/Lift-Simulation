@@ -11,16 +11,16 @@ function App() {
   const [currentFloor, setCurrentFloor] = useState(1);
   const [numOfFloors, setNumOfFloors] = useState(4);
   //!To be used when multiple lifts and adding up/down logic
-  const [floorPressed, setFloorPressed] = useState(1);
+  // const [floorPressed, setFloorPressed] = useState(1);
 
   const [currentLiftHeight, setCurrentLiftHeight] = useState(96)
 
-  const liftRef = useRef();
+  // const liftRef = useRef();
   const [floorDifference, setFloorDifference] = useState(0);
 
   const onFloorKeyPress = (floorNumber) => {
     setFloorDifference(Math.abs(currentFloor - floorNumber));
-    setFloorPressed(floorNumber);
+    // setFloorPressed(floorNumber);
     setCurrentFloor(floorNumber);
     setCurrentLiftHeight( floorNumber * 100)
   };
@@ -42,7 +42,7 @@ function App() {
           />
         );
       })}
-      <div className='lift-element' ref={liftRef} style={
+      <div className='lift-element' /* ref={liftRef} */ style={
         {
           bottom:`${currentLiftHeight}px`,
           transition: `bottom ${floorDifference}s linear`
