@@ -41,16 +41,21 @@
   width: 80px;
   height: 30px;
   font-weight: bold;
-  color: white;
+  color: black;
   border-radius: 10px;
   cursor: pointer;
+  margin: 2px;
+  border: none;
+}
+.button:hover {
+  color: white;
 }
 
 .up-button {
-  background: green;
+  background: #c38370;
 }
 .down-button {
-  background: blue;
+  background: #e4b7a0;
 }
 
 .lift {
@@ -62,7 +67,7 @@
 }
 
 .lift-element {
-  background: purple;
+  background: #a45c40;
   height: 80px;
   width: 50px;
   position: relative;
@@ -92,7 +97,7 @@
   flex-direction: column;
 }
 .lift-element-active {
-  background: purple;
+  background: #a45c40;
   height: 100px;
   width: 50px;
 }
