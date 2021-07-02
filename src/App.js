@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import Floor from './components/Floor';
 import './App.css';
 
@@ -13,9 +13,16 @@ function App() {
   //!To be used when multiple lifts and adding up/down logic
   const [floorPressed, setFloorPressed] = useState(1);
 
+  const [currentLiftHeight, setCurrentLiftHeight] = useState(96)
+
+  const liftRef = useRef();
+  const [floorDifference, setFloorDifference] = useState(0);
+
   const onFloorKeyPress = (floorNumber) => {
+    setFloorDifference(Math.abs(currentFloor - floorNumber));
     setFloorPressed(floorNumber);
     setCurrentFloor(floorNumber);
+    setCurrentLiftHeight( floorNumber * 100)
   };
 
   const generateFloorsArray = (totalFloors) => {
@@ -35,7 +42,12 @@ function App() {
           />
         );
       })}
-      {/* <div className='lift-element'></div> */}
+      <div className='lift-element' ref={liftRef} style={
+        {
+          bottom:`${currentLiftHeight}px`,
+          transition: `bottom ${floorDifference}s linear`
+        }
+      }></div>
     </div>
   );
 }

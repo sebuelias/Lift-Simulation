@@ -1,9 +1,10 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import './styles.scss';
 
 export default function Floor(props) {
   const { floorNumber, totalFloors, onKeyPress, currentFloor } = props;
   // const [numOfLift, setNumOfLift] = useState(2);
+  const liftRef = useRef();
 
   return (
     <div className='floor' key={floorNumber}>
@@ -29,11 +30,11 @@ export default function Floor(props) {
           </button>
         ) : null}
       </div>
-      <div className='lift'>
+      {/* <div className='lift'>
         {currentFloor === floorNumber ? (
-          <div className='lift-element'></div>
+          <div className='lift-element' ref={liftRef}></div>
         ) : null}
-      </div>
+      </div> */}
       <div className='floor-num'>Floor Number: {floorNumber}</div>
     </div>
   );

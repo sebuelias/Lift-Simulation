@@ -1,3 +1,7 @@
+.root {
+  box-sizing: border-box;
+}
+
 .container {
   display: flex;
   flex-direction: column;
@@ -5,6 +9,7 @@
   align-items: center;
   height: 100vh;
   width: 100vw;
+  position: absolute;
 }
 .lift-container {
   /* height: 80%; */
@@ -58,8 +63,9 @@
 
 .lift-element {
   background: purple;
-  height: 50px;
+  height: 80px;
   width: 50px;
+  position: relative;
 }
 
 .vertical-floors {
